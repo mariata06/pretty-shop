@@ -1,3 +1,28 @@
+/* variables */
+
+:root {
+  --color-primary: #645cff;
+  --color-primary-dark: #282566;
+  --color-primary-light: #a29dff;
+  --color-grey-1: #102a42;
+  --color-grey-5: #617d98;
+  --color-grey-10: #f1f5f8;
+  --color-grey-20: #ccc;
+  --color-grey-30: #adb4b9;
+  --color-grey-40: #4b4b4b;
+  --color-grey-50: #3a3a3a;
+  --color-white: #fff;
+  --color-red-dark: hsl(360, 67%, 44%);
+  --color-red-light: hsl(360, 71%, 66%);
+  --color-beige: rgb(228, 193, 128);
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.25rem;
+  --large-screen-width: 1170px;
+  --small-screen-width: 90vw;
+  --fixed-width: 50rem;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
