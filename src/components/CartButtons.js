@@ -50,6 +50,7 @@ const Wrapper = styled.div`
         svg {
             height: 1.6rem;
             margin-left: 5px;
+            color: var(--color-grey-50);
         }
     }
 
@@ -76,7 +77,7 @@ const Wrapper = styled.div`
         border-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
-        color: var(--clr-grey-50);
+        color: var(--color-grey-50);
         letter-spacing: var(--spacing);
     }
 

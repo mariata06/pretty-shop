@@ -11,6 +11,7 @@
   --color-grey-30: #adb4b9;
   --color-grey-40: #4b4b4b;
   --color-grey-50: #3a3a3a;
+  --color-black: #000;
   --color-white: #fff;
   --color-red-dark: hsl(360, 67%, 44%);
   --color-red-light: hsl(360, 71%, 66%);
@@ -34,4 +35,15 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
 }
