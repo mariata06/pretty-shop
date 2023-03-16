@@ -6,6 +6,7 @@ import { links } from '../utils/data';
 
 //styles
 import styled from 'styled-components';
+import CartButtons from './CartButtons';
 
 const Navbar = () => {
   return (
@@ -31,6 +32,7 @@ const Navbar = () => {
             })
           }
         </ul>
+        <CartButtons />
       </div>
     </NavContainer>
   );
@@ -75,14 +77,14 @@ const NavContainer = styled.nav`
   }
 
   .logo {
-        font-size: 2.5rem;
-        font-family: "Lobster", cursive;
-        font-weight: lighter;
+    font-size: 2.5rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
 
-        span {
-            color: var(--color-beige);
-        }
+    span {
+      color: var(--color-beige);
     }
+  }
 
   @media (min-width: 767px) {
     .nav-toggle {
@@ -107,7 +109,7 @@ const NavContainer = styled.nav`
         font-size: 1rem;
         font-weight: bold;
         text-transform: capitalize;
-        /* letter-spacing: var(--spacing); */
+        letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
           border-bottom: 2px solid var(--color-beige);

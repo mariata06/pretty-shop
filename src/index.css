@@ -16,11 +16,11 @@
   --color-red-light: hsl(360, 71%, 66%);
   --color-beige: rgb(228, 193, 128);
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
   --radius: 0.25rem;
   --large-screen-width: 1170px;
   --small-screen-width: 90vw;
   --fixed-width: 50rem;
+  --spacing: 0.1rem;
 }
 
 body {
