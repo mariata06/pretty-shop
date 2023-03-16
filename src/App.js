@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { Home, About, Cart, Products } from './pages';
-import { Navbar, Footer } from './components';
+import { Navbar, Footer, Sidebar } from './components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <Sidebar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/About" element={<About />} />

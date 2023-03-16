@@ -80,6 +80,7 @@ const NavContainer = styled.nav`
     font-size: 2.5rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+    color: var(--color-black);
 
     span {
       color: var(--color-beige);
