@@ -9,6 +9,7 @@ import { links } from '../utils/data';
 import styled from 'styled-components';
 
 const Sidebar = () => {
+    
     const isOpen = false;
     return (
         <SidebarContainer>
