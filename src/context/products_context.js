@@ -4,7 +4,7 @@ import reducer from '../reducers/products_reducer';
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from '../actions';
 
 const initialState = {
-    iseSudebarOpen: false
+    isSidebarOpen: false
 }
 
 const ProductsContext = React.createContext()
@@ -19,10 +19,6 @@ export const ProductsProvider = ( { children }) => {
     const closeSidebar = () => {
         dispatch({type: SIDEBAR_CLOSE});
     }
-
-    // useEffect(() => {
-    //     openSidebar()
-    // }, [])
 
     return (
         <ProductsContext.Provider value={{...state, openSidebar, closeSidebar}}>

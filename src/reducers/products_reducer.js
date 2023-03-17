@@ -8,7 +8,7 @@ const products_reducer = (state, action) => {
 
     if(action.type === SIDEBAR_CLOSE) {
         console.log(action);
-        return {...state, isSidebarClose: false}
+        return {...state, isSidebarOpen: false}
     }
 
     return state

@@ -3,12 +3,15 @@ import React from 'react';
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { links } from '../utils/data';
+import { useProductsContext } from '../context/products_context';
 
 //styles
 import styled from 'styled-components';
 import CartButtons from './CartButtons';
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
+
   return (
     <NavContainer className="Navbar">
       <div className='nav-center'>
@@ -16,7 +19,7 @@ const Navbar = () => {
           <Link to="/">
             <div className='logo'>Pretty<span>&nbsp;Shop&nbsp;</span></div>
           </Link>
-          <button type="button" className='nav-toggle'>
+          <button type="button" className='nav-toggle' onClick={openSidebar}>
             <FaBars />
           </button>
         </div>

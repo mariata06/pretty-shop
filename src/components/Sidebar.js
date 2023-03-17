@@ -4,19 +4,20 @@ import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import CartButtons from './CartButtons';
 import { links } from '../utils/data';
+import { useProductsContext } from '../context/products_context';
 
 //styles
 import styled from 'styled-components';
 
 const Sidebar = () => {
+    const {isSidebarOpen, closeSidebar} = useProductsContext();
     
-    const isOpen = false;
     return (
         <SidebarContainer>
-            <aside className={`${isOpen ? 'sidebar show-sidebar':'sidebar'}`}>
+            <aside className={`${isSidebarOpen ? 'sidebar show-sidebar':'sidebar'}`}>
                 <div className='sidebar-header'>
                     <div className='logo'>Pretty<span>&nbsp;Shop&nbsp;</span></div>
-                    <button type='button' className='close-btn'>
+                    <button type='button' className='close-btn' onClick={closeSidebar}>
                         <FaTimes />
                     </button>
                 </div>
@@ -25,12 +26,12 @@ const Sidebar = () => {
                         const { id, text, url } = link;
                         return (
                             <li key={id}>
-                                <Link to={url}>{text}</Link>
+                                <Link to={url} onClick={closeSidebar}>{text}</Link>
                             </li>
                         )
                     })}
                     <li>
-                        <Link to='/checkout'>checkout</Link>    
+                        <Link to='/checkout' onClick={closeSidebar}>checkout</Link>    
                     </li>
                 </ul>
                 <CartButtons />
@@ -89,8 +90,8 @@ const SidebarContainer = styled.div`
     .links a:hover {
         padding: 1rem 1.5rem;
         padding-left: 2rem;
-        background: var(--color-grey-50);
-        color: var(--color-grey-20);
+        background: var(--color-grey-10);
+        color: var(--color-grey-50);
     }
     .sidebar {
         position: fixed;
