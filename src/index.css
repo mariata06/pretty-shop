@@ -11,17 +11,21 @@
   --color-grey-30: #adb4b9;
   --color-grey-40: #4b4b4b;
   --color-grey-50: #3a3a3a;
+  --color-dark-brown: #453227;
+  --color-medium-brown: #795744;
   --color-black: #000;
   --color-white: #fff;
   --color-red-dark: hsl(360, 67%, 44%);
   --color-red-light: hsl(360, 71%, 66%);
   --color-beige: rgb(228, 193, 128);
+  --color-light-beige: #eaded7;
   --transition: all 0.3s linear;
   --radius: 0.25rem;
   --large-screen-width: 1170px;
   --small-screen-width: 90vw;
   --fixed-width: 50rem;
   --spacing: 0.1rem;
+  --max-width: 1170px;
 }
 
 body {
@@ -37,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+.page {
+  /* min-height: calc(65vh - 10rem); */
+  /* height: 100vh; */
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -46,4 +55,49 @@ a {
 
 .content {
   flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: .1rem;
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}  
+
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.underline {
+  /* background-color: rgb(206, 153, 56); */
+  background-color: var(--color-beige);
+  height: 5px;
+  width: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1023px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-center {
+  margin: 0 auto;
+  max-width: 1170px;
+  max-width: var(--max-width);
+  width: 90vw;
 }
