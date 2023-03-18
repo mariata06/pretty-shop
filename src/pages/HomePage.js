@@ -1,10 +1,11 @@
 import React from 'react';
+import { HomeIntro } from '../components'
 
 const HomePage = () => {
   return (
-    <div className="Home content">
-        <h4>Home Page</h4>
-    </div>
+    <main className="content">
+      <HomeIntro />
+    </main>
   );
 }
 
