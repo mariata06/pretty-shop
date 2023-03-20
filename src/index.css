@@ -48,10 +48,16 @@ a {
   text-decoration: none;
 }
 
-.page {
-  /* min-height: calc(65vh - 10rem); */
-  /* height: 100vh; */
+/* .page {
+  min-height: calc(65vh - 10rem);
+  height: 100vh;
+  min-height: calc(100vh - (20vh + 10rem));
 }
+
+.page-100 {
+  min-height: calc(100vh - 10rem);
+  padding: 5rem 0;
+} */
 
 .App {
   display: flex;
@@ -62,6 +68,7 @@ a {
 
 .content {
   flex: 1 0 auto;
+  padding: 5rem 0;
 }
 
 h1,
