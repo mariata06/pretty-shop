@@ -39,3 +39,5 @@ export const services = [
         text: 'Fusce molestie, lectus sit amet facilisis consequat, purus libero feugiat ipsum, ac malesuada tellus leo feugiat justo. Nunc sit amet luctus mi. Quisque sit amet turpis dolor. In vitae vulputate.'
     },
 ]
+
+export const products_url = 'https://bejewelled-churros-9a5216.netlify.app/productsnew.json'
