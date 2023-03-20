@@ -1,11 +1,12 @@
 import React from 'react';
-import { HomeIntro, Services } from '../components'
+import { HomeIntro, Services, Contact } from '../components'
 
 const HomePage = () => {
   return (
     <main className="content">
       <HomeIntro />
       <Services />
+      <Contact />
     </main>
   );
 }
