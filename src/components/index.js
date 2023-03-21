@@ -6,5 +6,7 @@ import HomeIntro from './HomeIntro';
 import Services from './Services';
 import Contact from './Contact';
 import Bestsellers from './Bestsellers';
+import Loading from './Loading';
+import Error from './Error';
 
-export { Navbar, Footer, Sidebar, PageIntro, HomeIntro, Services, Contact, Bestsellers }
+export { Navbar, Footer, Sidebar, PageIntro, HomeIntro, Services, Contact, Bestsellers, Loading, Error }
