@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/data';
-import { Loading, Error, ProductImages, PageHero } from '../components';
+import { Loading, Error, ProductImages, PageIntro, Stars, AddToCart} from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -43,9 +43,38 @@ const SingleProductPage = () => {
     return <Error />
   }
 
+  const {name, price, description, stock, stars, reviews, id:sku, company, images} = product
   return (
     <Wrapper className="Single Product content">
-      <h4>Single Product Page</h4>
+      <PageIntro title={name} product/>
+      <div className='section section-center page'>
+        <Link to="/products" className='btn'>
+          back to products
+        </Link>
+        <div className='product-center'>
+          <ProductImages />
+          <section className='content'>
+            <h2>{name}</h2>
+            <Stars   />
+            <h5 className='price'>{price}</h5>
+            <p className='desc'>{description}</p> 
+            <p className='info'>
+              <span> Available : </span>
+              {stock > 0 ? 'In stock' : 'out of stock'}
+            </p>
+            <p className='info'>
+              <span> SKU </span>
+              {sku}
+            </p>
+            <p className='info'>
+              <span> Brand : </span>
+              {company}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart />}
+          </section>
+        </div>
+      </div>
     </Wrapper>
   );
 }
@@ -58,6 +87,10 @@ const Wrapper = styled.main`
   }
   .price {
     color: var(--color-medium1-brown);
+  }
+
+  .section-center {
+    text-align: left;
   }
 `
 
