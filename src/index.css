@@ -25,6 +25,7 @@
   --color-red-light: hsl(360, 71%, 66%);
   --color-medium-beige: #ab7a5f;
   --color-beige: rgb(228, 193, 128);
+  --color-selective-yellow: #FFB900;
   --color-light-beige: #eaded7;
   --transition: all 0.3s linear;
   --radius: 0.25rem;
