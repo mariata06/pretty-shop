@@ -16,9 +16,15 @@ const SingleProductPage = () => {
     single_product: product, fetchSingleProduct
   } = useProductsContext()
 
+
+
   useEffect(() => {
-    fetchSingleProduct(`${url}`)
-  }, [])
+    fetchSingleProduct(`${url}${id}`)
+  }, [id])
+
+  // useEffect(() => {
+  //   fetchSingleProduct(`${url}`)
+  // }, [])
 
   //for checking and rendering unique single product by adding his id to the url
   // useEffect(() => {

@@ -42,4 +42,7 @@ export const services = [
 
 export const products_url = 'https://bejewelled-churros-9a5216.netlify.app/productsnew.json'
 
-export const single_product_url = 'https://bejewelled-churros-9a5216.netlify.app/singleproduct.json'
+// export const single_product_url = 'https://bejewelled-churros-9a5216.netlify.app/singleproduct.json'
+
+export const single_product_url = 'https://bejewelled-churros-9a5216.netlify.app/'
+// export const single_product_url = 'https://course-api.com/react-store-single-product?id='
