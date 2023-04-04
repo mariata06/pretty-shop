@@ -12,5 +12,30 @@ import ProductImages from './ProductImages';
 import Stars from './Stars';
 import AddToCart from './AddToCart';
 import AmountButtons from './AmountButtons';
+import Sort from './Sort';
+import Filters from './Filters';
+import ProductList from './ProductList';
+import GridView from './GridView';
+import ListView from './ListView';
 
-export { Navbar, Footer, Sidebar, PageIntro, HomeIntro, Services, Contact, Bestsellers, Loading, Error, ProductImages, Stars, AddToCart, AmountButtons }
+export { 
+    Navbar, 
+    Footer, 
+    Sidebar, 
+    PageIntro, 
+    HomeIntro, 
+    Services, 
+    Contact, 
+    Bestsellers, 
+    Loading, 
+    Error, 
+    ProductImages, 
+    Stars, 
+    AddToCart, 
+    AmountButtons,
+    Sort,
+    Filters,
+    ProductList,
+    GridView,
+    ListView
+}

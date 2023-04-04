@@ -6,5 +6,4 @@ import Error from './ErrorPage';
 import SingleProduct from './SingleProductPage';
 import Checkout from './CheckoutPage';
 
-
 export { Home, About, Cart, Products, Error, SingleProduct, Checkout }
