@@ -77,7 +77,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
@@ -90,7 +90,11 @@ const Wrapper = styled.main`
     display: grid;
     gap: 4rem;
     margin-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+    /* -webkit-box-align: center; */
+    /* align-items: center; */
   }
+
   .price {
     color: var(--color-medium1-brown);
   }
@@ -101,6 +105,7 @@ const Wrapper = styled.main`
 
   .content {
     padding: 2rem 0;
+    padding: 0;
   }
 `
 

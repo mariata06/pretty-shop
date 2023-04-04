@@ -24,7 +24,7 @@ const Product = ({ image, name, price, id }) => {
 const Wrapper = styled.article`
     .container {
         position: relative;
-        background: var(--color-grey-10);
+        background: var(--color-black-2);
         border-radius: var(--radius);
     }
     img {
@@ -35,11 +35,18 @@ const Wrapper = styled.article`
         transition: var(--transition);
 
         @media (min-width: 1023px) {
-            /* object-fit: cover; */
-            /* width: 70%; */
             margin: 0 auto;
         }
     }
+
+    .container:hover img {
+        opacity: 0.5;
+
+    }
+    .container:hover .link {
+        opacity: 1;
+    }
+
     .link {
         position: absolute;
         top: 50%;
@@ -58,11 +65,6 @@ const Wrapper = styled.article`
             color: var(--color-white);
             width: 20px;
             height: 20px;
-        }
-    }
-    &:hover {
-        .link {
-            opacity: 1;
         }
     }
 `
