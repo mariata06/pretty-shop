@@ -45,6 +45,21 @@ const Filters = () => {
             })}
           </select>
         </div>
+        <div className="form-control">
+          <h5>Colors</h5>
+          <div className='colors'>
+            {
+              colors.map((item, index) => {
+                if(item === 'all') {
+                  return <button key="index" name="color" onClick={updateFilters} data-color="all" className={`${color === 'all' ? 'all-btn active' : 'all-btn'}`}>all</button>
+                }
+                return <button key={index} name="color" style={{background: item}} className={`${color === item ? 'color-btn active' : 'color-btn'}`} data-color={item} onClick={updateFilters}>
+                {color === item ? <FaCheck /> : null}
+                </button>
+              })
+            }
+          </div>
+        </div>
       </form>
     </Wrapper>
   );
@@ -99,6 +114,36 @@ const Wrapper = styled.div`
       padding: 0.5rem;
       width: 50%;
       outline: none;
+    }
+    .colors {
+      display: flex;
+      align-items: center;
+    }
+    .color-btn {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: #222;
+      margin-right: 0.5rem;
+      border: none;
+      cursor: pointer;
+      opacity: 0.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 0.5rem;
+        color: var(--color-white);
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+    .all-btn {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
     }
   }
 `
