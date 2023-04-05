@@ -66,8 +66,16 @@ const filter_reducer = (state, action) => {
                 return product.name.toLowerCase().startsWith(text)
             })
         }
+
+        //filtering - by category
+        if (category !== 'all') {
+            tempProducts = tempProducts.filter((product) => product.category === category)
+        }
+
         return {...state, filtered_products: tempProducts}
     }
+
+    
 //   return state
   throw new Error(`No Matching "${action.type}" - action type`)
 }
