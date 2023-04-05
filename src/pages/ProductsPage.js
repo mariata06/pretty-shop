@@ -7,14 +7,13 @@ const ProductsPage = () => {
     <main>
       <PageIntro title="products" />
       <Wrapper className="page">
-        <div className='product-center'>
+        <div className='product-center section-center'>
           <Filters />
-          <div>
+          <div className='sort-container'>
             <Sort />
             <ProductList />
           </div>
         </div>
-        <h4>Products Page</h4>
       </Wrapper>
     </main>
   );
@@ -35,6 +34,14 @@ const Wrapper = styled.div`
 
   .product-center {
     display: flex;
+
+    @media (max-width: 767px) {
+    flex-direction: column;
+    }
+  }
+
+  .sort-container {
+    width: 75%;
   }
 ` 
 

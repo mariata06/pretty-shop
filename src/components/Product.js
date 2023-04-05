@@ -67,6 +67,10 @@ const Wrapper = styled.article`
             height: 20px;
         }
     }
+
+    /* @media (max-width: 767px) {
+        width: 100%;
+    } */
 `
 
 export default Product;

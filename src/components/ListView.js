@@ -26,7 +26,7 @@ const ListView = ({ products }) => {
 
 const Wrapper = styled.section`
   display: grid;
-  justify-content: center;
+  /* justify-content: center; */
 
   img {
     display: block;
@@ -42,15 +42,29 @@ const Wrapper = styled.section`
 
   article {
     width: 800px;
+    width: 100%;
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-between;
     align-content: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      flex-direction: column;
+      /* justify-content: space-between; */
+      margin-bottom: 40px;
+    }
   }
 
   div {
-    width: 400px;
+    width: 60%;
     text-align: left;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 `
 
