@@ -32,10 +32,18 @@ const Filters = () => {
         <div className="form-control">
           <h5>Category</h5>
           <div>
-            {categories.map((item, index) => {
+            {categories.map((item, index) => { 
               return <button key={index} onClick={updateFilters} name='category' type='button' className={`${category === item.toLowerCase() ? 'active' : null }`}>{item}</button>
             })}
           </div>
+        </div>
+        <div className="form-control">
+          <h5>Company</h5>
+          <select name="company" value={company} onChange={updateFilters} className='company'>
+            {companies.map((item, index) => {
+              return <option key={index} value={item}>{item}</option>
+            })}
+          </select>
         </div>
       </form>
     </Wrapper>
@@ -71,6 +79,7 @@ const Wrapper = styled.div`
     margin-bottom: 1.25rem;
     h5 {
       margin-bottom: 0.5rem;
+      text-align: left;
     }
     .search-input {
       padding: 0.5rem;
@@ -80,6 +89,16 @@ const Wrapper = styled.div`
       border-color: transparent;
       background-color: var(--color-grey-10);
       border-radius: var(--radius);
+      outline: none;
+    }
+    .company {
+      background: var(--color-grey-10);
+      border-radius: var(--radius);
+      border-color: transparent;
+      /* padding: 0.25rem; */
+      padding: 0.5rem;
+      width: 50%;
+      outline: none;
     }
   }
 `
