@@ -1,4 +1,4 @@
-import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS } from '../actions'
+import { LOAD_PRODUCTS, SET_GRIDVIEW, SET_LISTVIEW, UPDATE_SORT, SORT_PRODUCTS, UPDATE_FILTERS, FILTER_PRODUCTS, CLEAR_FILTERS } from '../actions'
 
 const filter_reducer = (state, action) => {
     if (action.type === LOAD_PRODUCTS) {
@@ -29,23 +29,19 @@ const filter_reducer = (state, action) => {
         let tempProducts = [...filtered_products];
         if (sort === 'price-lowest') {
             tempProducts = tempProducts.sort((a, b) => a.price - b.price)
-            // console.log('price-lowest');
         }
         if (sort === 'price-highest') {
             tempProducts = tempProducts.sort((a, b) => b.price - a.price)
-            // console.log('price-highest');
         }
         if (sort === 'name-a') {
             tempProducts = tempProducts.sort((a, b) => {
                 return a.name.localeCompare(b.name);
             })
-            // console.log('name-a');
         }
         if (sort === 'name-z') {
             tempProducts = tempProducts.sort((a, b) => {
                 return b.name.localeCompare(a.name); 
             })
-            // console.log('name-z');
         }
         return {...state, filtered_products: tempProducts}
     }
@@ -56,15 +52,15 @@ const filter_reducer = (state, action) => {
     } 
 
     if (action.type === FILTER_PRODUCTS) {
-        // console.log('filtering products');
         const { all_products } = state
         const {text, category, company, color, price, shipping} = state.filters 
         let tempProducts = [...all_products]
+
         //filtering - search by name 
         if (text) {
             tempProducts = tempProducts.filter((product) => {
                 return product.name.toLowerCase().startsWith(text)
-            })
+            }) 
         }
 
         //filtering - by category
@@ -94,7 +90,21 @@ const filter_reducer = (state, action) => {
         return {...state, filtered_products: tempProducts}
     }
 
-    
+    if (action.type === CLEAR_FILTERS) {
+        return {
+            ...state,
+            filters: {
+                ...state.filters,
+                text: '',
+                company: 'all',
+                category: 'all',
+                color: 'all',
+                price: state.filters.max_price,
+                shipping: false,
+            },
+        }
+    }
+
 //   return state
   throw new Error(`No Matching "${action.type}" - action type`)
 }

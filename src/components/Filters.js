@@ -70,6 +70,7 @@ const Filters = () => {
           <input type="checkbox" name='shipping' id="shipping" onChange={updateFilters} checked={shipping}/>
         </div>
       </form>
+      <button type='button' className='clear-btn' onClick={clearFilters}>{' '}clear filters</button>
     </Wrapper>
   );
 }
@@ -168,6 +169,16 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     line-height: 1.25;
     text-transform: capitalize;
+  }
+  .clear-btn {
+    background-color: var(--color-red-dark);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.5rem;
+    color: var(--color-white);
+    transition: opacity 0.3s ease-out;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 `
 
