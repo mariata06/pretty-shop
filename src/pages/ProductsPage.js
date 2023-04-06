@@ -42,6 +42,7 @@ const Wrapper = styled.div`
 
   .sort-container {
     width: 75%;
+    padding-bottom: 5rem;
   }
 ` 
 

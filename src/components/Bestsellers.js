@@ -49,6 +49,10 @@ const Wrapper = styled.section`
         }
     }
 
+    h2 {
+        text-align: center;
+    }
+
     @media screen and (min-width: 1023px) {
         h2 {
             font-size: 2rem;
