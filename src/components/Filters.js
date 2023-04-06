@@ -4,7 +4,7 @@ import { useFilterContext } from '../context/filter_context';
 import { FaCheck } from 'react-icons/fa';
 
 const Filters = () => {
-  const { filters: {text, category, company, color, min_price, max_price, shipping }, updateFilters, clearFilters, all_products} = useFilterContext();
+  const { filters: {text, category, company, color, min_price, price, max_price, shipping }, updateFilters, clearFilters, all_products} = useFilterContext();
   
   const getUniqueValues = (data, type) => {
     let unique = data.map((item) => item[type])
@@ -59,6 +59,11 @@ const Filters = () => {
               })
             }
           </div>
+        </div>
+        <div className="form-control">
+          <h5>Price</h5>
+          <p className='price'>${price / 100}</p>
+          <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price}/>
         </div>
       </form>
     </Wrapper>

@@ -62,7 +62,7 @@ const SingleProductPage = () => {
           <section className='content'>
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
-            <h5 className='price'>{price}</h5>
+            <h5 className='price'>{price / 100}</h5>
             <p className='desc'>{description}</p> 
             <p className='info'>
               <span> Available : </span>
