@@ -49,17 +49,19 @@ body {
 a {
   text-decoration: none;
 }
-
-/* .page {
+/* 
+.page {
   min-height: calc(65vh - 10rem);
   height: 100vh;
-  min-height: calc(100vh - (20vh + 10rem));
-}
+  height: 65vh;
+  min-height: calc(100vh - (20vh + 10rem)); 
+}*/
 
-.page-100 {
+/* .page-100 {
   min-height: calc(100vh - 10rem);
+  min-height: calc(40vh - 10rem);
   padding: 5rem 0;
-} */
+}*/ 
 
 .App {
   display: flex;

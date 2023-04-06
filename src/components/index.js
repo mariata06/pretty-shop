@@ -17,6 +17,7 @@ import Filters from './Filters';
 import ProductList from './ProductList';
 import GridView from './GridView';
 import ListView from './ListView';
+import CartContent from './CartContent';
 
 export { 
     Navbar, 
@@ -37,5 +38,6 @@ export {
     Filters,
     ProductList,
     GridView,
-    ListView
+    ListView,
+    CartContent
 }
