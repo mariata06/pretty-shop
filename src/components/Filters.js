@@ -65,6 +65,10 @@ const Filters = () => {
           <p className='price'>${price / 100}</p>
           <input type="range" name="price" onChange={updateFilters} min={min_price} max={max_price} value={price}/>
         </div>
+        <div className="form-control shipping">
+          <label htmlFor="shipping">Free Shipping</label>
+          <input type="checkbox" name='shipping' id="shipping" onChange={updateFilters} checked={shipping}/>
+        </div>
       </form>
     </Wrapper>
   );
@@ -150,6 +154,20 @@ const Wrapper = styled.div`
       align-items: center;
       margin-right: 0.5rem;
     }
+  }
+  .shipping {
+    display: flex;
+    align-items: center;
+
+    input {
+      margin: 0;
+      margin-left: 5px;
+    }
+  }
+  .shipping label {
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+    text-transform: capitalize;
   }
 `
 
