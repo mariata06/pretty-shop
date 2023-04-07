@@ -4,18 +4,18 @@ import { useCartContext } from '../context/cart_context';
 import { Link } from 'react-router-dom';
 import CartHeading from './CartHeading';
 import CartFooter from './CartFooter';
+import CartItem from './CartItem';
 
 const CartContent = () => {
   const { cart } = useCartContext();
   return (
     <Wrapper className="section section-center content">
-      <h2>your cart here...</h2>
       <CartHeading />
       {
         cart.map((item) => {
-          return <div key={item.id} {...item}>
+          return <CartItem key={item.id} {...item}>
             <h5>Cart Item</h5>
-          </div>
+          </CartItem>
         })
       }
       <hr />
@@ -37,6 +37,11 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      /* flex-wrap: wrap; */
+    }
   }
   .link-btn {
     background: transparent;
@@ -49,9 +54,19 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     font-weight: 400;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   .clear-btn {
     background: var(--color-black);
+  }
+  .link-btn,
+  .clear-btn {
+    transition: opacity 0.3s ease-out;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 `
 

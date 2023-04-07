@@ -19,6 +19,9 @@ const Wrapper = styled.div`
     /* grid-template-columns: repeat(3, 1fr); */
     align-items: center;
     justify-content: center;
+    @media (max-width: 767px) {
+        width: 100px;
+    }
     h2 {
         width: 33%;
         font-size: 2.5rem;

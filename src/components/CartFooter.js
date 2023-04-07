@@ -30,6 +30,10 @@ const Wrapper = styled.section`
     .cart-wrapper {
         width: 300px;
 
+        @media (max-width: 320px) {
+            width: 100%;
+        }
+
         article {
             /* width: 300px; */
             border: 1px solid var(--color-grey-30);
