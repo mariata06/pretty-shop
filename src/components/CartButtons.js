@@ -6,9 +6,11 @@ import { useProductsContext } from '../context/products_context';
 
 //styles
 import styled from 'styled-components';
+import { useCartContext } from '../context/cart_context';
 
 const CartButtons = () => {
     const {closeSidebar} = useProductsContext();
+    const { total_items } = useCartContext();
 
     return (
         <Wrapper className='cart-btn-wrapper'>
@@ -17,7 +19,7 @@ const CartButtons = () => {
             <span className='cart-container'>
                 <FaShoppingCart />
                 <span className='cart-value'>
-                    12
+                    {total_items}
                 </span>
             </span>
         </Link>
@@ -84,7 +86,7 @@ const Wrapper = styled.div`
         letter-spacing: var(--spacing);
     }
 
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
     display: none;
 }
 
