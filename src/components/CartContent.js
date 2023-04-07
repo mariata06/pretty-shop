@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { useCartContext } from '../context/cart_context';
 import { Link } from 'react-router-dom';
+import CartHeading from './CartHeading';
 
 const CartContent = () => {
   const { cart } = useCartContext();
   return (
     <Wrapper className="section section-center content">
       <h2>your cart here...</h2>
-      <div>Cart Heading</div>
+      <CartHeading />
       {
         cart.map((item) => {
           return <div key={item.id} {...item}>
