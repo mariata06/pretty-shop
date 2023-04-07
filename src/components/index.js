@@ -19,6 +19,7 @@ import GridView from './GridView';
 import ListView from './ListView';
 import CartContent from './CartContent';
 import CartHeading from './CartHeading';
+import CartFooter from './CartFooter';
 
 export { 
     Navbar, 
@@ -42,4 +43,5 @@ export {
     ListView,
     CartContent,
     CartHeading,
+    CartFooter,
 }

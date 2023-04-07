@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useCartContext } from '../context/cart_context';
 import { Link } from 'react-router-dom';
 import CartHeading from './CartHeading';
+import CartFooter from './CartFooter';
 
 const CartContent = () => {
   const { cart } = useCartContext();
@@ -26,7 +27,7 @@ const CartContent = () => {
           clear shopping cart
         </button>
       </div>
-      <div>Cart Total</div>
+      <CartFooter />
     </Wrapper>
   );
 }
