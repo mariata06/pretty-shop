@@ -19,6 +19,7 @@ const SingleProductPage = () => {
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
+  // eslint-disable-next-line  
   }, [id])
 
   // useEffect(() => {
@@ -38,6 +39,7 @@ const SingleProductPage = () => {
         navigate('/')
       }, 3000)
     }
+  // eslint-disable-next-line  
   }, [error])
 
   if(loading) {
@@ -61,7 +63,7 @@ const SingleProductPage = () => {
           <section className='content'>
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
-            <h5 className='price'>{price / 100}</h5>
+            <h5 className='price'>${price / 100}</h5>
             <p className='desc'>{description}</p> 
             <p className='info'>
               <span> Available : </span>

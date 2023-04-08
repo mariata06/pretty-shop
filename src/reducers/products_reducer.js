@@ -7,7 +7,7 @@ import {
     GET_SINGLE_PRODUCT_BEGIN,
     GET_SINGLE_PRODUCT_SUCCESS,
     GET_SINGLE_PRODUCT_ERROR,
-    LOAD_PRODUCTS, 
+    // LOAD_PRODUCTS, 
 } from '../actions';
 
 const products_reducer = (state, action) => {
@@ -68,6 +68,7 @@ const products_reducer = (state, action) => {
     }
 
     return state
+    // eslint-disable-next-line
     throw new Error(`No Matching '${action.type}' - action type`)
 }
 

@@ -10,7 +10,7 @@ import {
     GET_SINGLE_PRODUCT_BEGIN,
     GET_SINGLE_PRODUCT_SUCCESS,
     GET_SINGLE_PRODUCT_ERROR,
-    LOAD_PRODUCTS,
+    // LOAD_PRODUCTS,
 } from '../actions';
 import { products_url as url } from '../utils/data';
 
