@@ -52,6 +52,7 @@ const Wrapper = styled.article`
     grid-template-rows: 75px;
     gap: 3rem 1rem;
     justify-items: center;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     align-items: center;
     @media (max-width: 767px) {

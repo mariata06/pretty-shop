@@ -3,6 +3,8 @@ import { ADD_TO_CART, REMOVE_CART_ITEM, TOGGLE_CART_ITEM_AMOUNT, CLEAR_CART, COU
 const cart_reducer = (state, action) => {
     if(action.type === ADD_TO_CART) {
         const {id, color, amount, product} = action.payload;
+        console.log(action.payload);
+        console.log('product ',product);
         const tempItem = state.cart.find((item) => item.id === id + color)
 
         if(tempItem) {

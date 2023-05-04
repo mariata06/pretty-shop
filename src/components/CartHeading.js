@@ -18,6 +18,7 @@ const CartHeading = () => {
 
 const Wrapper = styled.div`
     .content {
+        padding: 0 0 4rem;
         display: grid;
         grid-template-columns: 316px 1fr 1fr 1fr auto;
         justify-items: center;

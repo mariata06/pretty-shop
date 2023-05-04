@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
 
     //add to cart
     const addToCart = (id, color, amount, product) => {
+        console.log('cart_context', product);
         dispatch({type: ADD_TO_CART, payload: {id, color, amount, product}})
     }
 
